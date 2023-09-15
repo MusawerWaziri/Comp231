@@ -1,4 +1,4 @@
-# Comp231
+# NutriGuide
 Comp231 - Software Development Project 1
 
 Overview:
