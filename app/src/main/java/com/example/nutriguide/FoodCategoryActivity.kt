@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 /**
- *  RecycleView
- *  Will contain button (Breakfast, Lunch, Dinner, etc.) to the FoodListingActivity.
- */
+Alex Tang – Developer
+Abdul Waziri – Developer
+Sara Heimbecker – Developer
+Vanessa Victorino - Agile Customer
+
+RecycleView
+Will buttons to the FoodListingActivity, about, contact, etc.
+ **/
+
 class FoodCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
