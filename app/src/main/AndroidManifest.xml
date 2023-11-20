@@ -15,8 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NutriGuide"
-        tools:targetApi="33"
-        tools:ignore="ObsoleteSdkInt">
+        tools:ignore="ObsoleteSdkInt"
+        tools:targetApi="33">
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".FoodDetailActivity"
             android:exported="false" />

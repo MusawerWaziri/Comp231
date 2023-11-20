@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 /**
- *  RecycleView
- *  Will contain button (Breakfast, Lunch, Dinner, etc.) to the FoodListingActivity.
+ *  Will contain the search bar, button to the FoodCategoryActivity, about, contact, etc.
  */
-class FoodCategoryActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_food_category)
+        setContentView(R.layout.activity_home)
     }
 }
