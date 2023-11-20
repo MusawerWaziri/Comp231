@@ -5,7 +5,7 @@ import android.os.Bundle
 
 /**
  *  RecycleView.
- *  Will contain button to the FoodDetailActivity.
+ *  Will contain buttons to the FoodDetailActivity.
  */
 class FoodListingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
