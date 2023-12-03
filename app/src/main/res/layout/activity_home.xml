@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <Button
+        android:id="@+id/foodCatButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Food Categories"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+    <Button
+        android:id="@+id/contactButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+    <SearchView
+        android:id="@+id/homeSearch"
+        android:layout_width="410dp"
+        android:layout_height="76dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="639dp"
+        app:srcCompat="@drawable/icon"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-206dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search:"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="240dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

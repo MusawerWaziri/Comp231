@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             if (validateLogin(username, password)) {
-                // This is where you would verify the credentials against your database
+                // This is where you would verify the credentials against your datafoobase
                 // For now, we assume the login is successful
                 goToHomeActivity()
             } else {
