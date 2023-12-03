@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -15,9 +16,15 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var confirmPasswordEditText: EditText
     private lateinit var registerButton: Button
 
+    // Initialize Firebase Auth
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         // Initialize views
         usernameEditText = findViewById(R.id.username)
@@ -34,7 +41,8 @@ class RegisterActivity : AppCompatActivity() {
             val confirmPassword = confirmPasswordEditText.text.toString()
 
             if (validateInput(username, email, password, confirmPassword)) {
-                registerUser(username, email, password)
+                // Register the user with Firebase
+                registerUser(email, password)
             }
         }
     }
@@ -55,15 +63,22 @@ class RegisterActivity : AppCompatActivity() {
         return true
     }
 
-    private fun registerUser(username: String, email: String, password: String) {
-        // Here you would handle the registration logic, such as adding the user to the database
-        // For now, we'll just show a toast message
-        showToast("Registration successful")
+    private fun registerUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign up success, update UI with the signed-in user's information
+                    showToast("Registration successful")
 
-        // Navigate to HomeActivity or LoginActivity after registration
-         val intent = Intent(this, HomeActivity::class.java)
-         startActivity(intent)
-         finish()
+                    // Jump to Main when registration is successful, could change later.
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // If sign up fails, display a message to the user.
+                    showToast("Authentication failed: ${task.exception?.message}")
+                }
+            }
     }
 
     private fun showToast(message: String) {
