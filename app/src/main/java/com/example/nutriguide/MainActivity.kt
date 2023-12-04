@@ -2,8 +2,12 @@ package com.example.nutriguide
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseApp
@@ -15,12 +19,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var registerButton: Button
     private lateinit var guestButton: Button
+    private lateinit var welcomeMsg: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         //Firebase setup
-        FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main)
 
         // Initialize views
@@ -29,6 +34,26 @@ class MainActivity : AppCompatActivity() {
         loginButton = findViewById(R.id.loginBtn)
         registerButton = findViewById(R.id.registerLink)
         guestButton = findViewById(R.id.guestBtn)
+        welcomeMsg = findViewById(R.id.welcome_msg)
+
+        //Invisible for 2sec except for the welcome text
+        usernameEditText.visibility = View.INVISIBLE
+        passwordEditText.visibility = View.INVISIBLE
+        loginButton.visibility = View.INVISIBLE
+        registerButton.visibility = View.INVISIBLE
+        guestButton.visibility = View.INVISIBLE
+
+
+        // Handler to introduce a 2-second delay
+        Handler(Looper.getMainLooper()).postDelayed({
+            usernameEditText.visibility = View.VISIBLE
+            passwordEditText.visibility = View.VISIBLE
+            loginButton.visibility = View.VISIBLE
+            registerButton.visibility = View.VISIBLE
+            guestButton.visibility = View.VISIBLE
+            welcomeMsg.visibility = View.GONE
+
+        }, 2000)
 
         // Set on click listener for login button
         loginButton.setOnClickListener {
