@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
+
 
 }
 
@@ -39,6 +39,7 @@ android {
 
 dependencies {
 
+    //noinspection GradleCompatible
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -50,6 +51,6 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
 
-    //implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
-    //implementation("com.square.picasso:picasso:2.71828")
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
 }
