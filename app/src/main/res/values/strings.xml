@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NutriGuide</string>
+    <string name="food_name" />
+    <string name="image_description" />
 </resources>

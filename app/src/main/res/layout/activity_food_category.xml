@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".FoodCategoryActivity">
 
+    <ListView
+        android:id="@+id/foodTypeListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@array/food_types" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
