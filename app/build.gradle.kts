@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
 
 }
 
@@ -50,6 +49,6 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
 
-    //implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
-    //implementation("com.square.picasso:picasso:2.71828")
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
 }

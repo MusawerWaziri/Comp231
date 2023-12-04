@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var registerButton: Button
+    private lateinit var guestButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.password)
         loginButton = findViewById(R.id.loginBtn)
         registerButton = findViewById(R.id.registerLink)
+        guestButton = findViewById(R.id.guestBtn)
 
         // Set on click listener for login button
         loginButton.setOnClickListener {
@@ -41,6 +43,11 @@ class MainActivity : AppCompatActivity() {
         // Set on click listener for register button to navigate to the RegisterActivity
         registerButton.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+        // Set on click listener for register button to navigate to the RegisterActivity
+        guestButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }
