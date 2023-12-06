@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".ContactActivity">
+
+    <TextView
+        android:id="@+id/textViewContactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/textViewContactInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: contact@example.com\nPhone: +1234567890"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visit Us"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123 Main Street\nCity, State 12345"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Email"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/buttonCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Us"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
