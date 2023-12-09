@@ -1,9 +1,6 @@
 package com.example.nutriguide
 
-
-
 import java.io.Serializable
-
 
 data class Food(
     val foodId: Int,
@@ -1043,7 +1040,7 @@ object Foods {
             description = "",
             recipe = "",
             nutrition ="",
-            image = ""
+            image = "https://i.pinimg.com/originals/f0/ac/6f/f0ac6faa1a4854c3951beff1f27a5453.jpg"
         ),
         Food(
             foodId = 16,

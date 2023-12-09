@@ -13,7 +13,8 @@
         android:layout_marginTop="100dp"
         android:layout_width="350dp"
         android:layout_height="350dp"
-        app:srcCompat="@drawable/icon"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/image_description"
         tools:layout_editor_absoluteX="86dp"
         tools:layout_editor_absoluteY="42dp"
         android:layout_gravity="center_horizontal"
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="@string/username_et"
+        android:inputType="text"
         android:visibility="visible"/>
 
     <EditText

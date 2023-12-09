@@ -18,7 +18,7 @@
     <ImageView
         android:id="@+id/iv_image_detail"
         android:layout_width="350dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/image_description"
         android:layout_height="200dp" />
     <TextView

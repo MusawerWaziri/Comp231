@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:background="#FFA5D6A7"
     android:padding="5dp"
+    android:orientation="vertical"
     tools:context=".FoodCategoryActivity">
 
     <ListView
         android:id="@+id/foodTypeListView"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:background="#FFE8F5E9"
         android:layout_gravity="center"
