@@ -3,7 +3,7 @@
     <string name="food_name" />
     <string name="image_description" />
     <string name="guest">Guest</string>
-    <string name="category_button">Category Button</string>
+    <string name="category_button">Food Category</string>
     <string name="welcome_to_nutriguide">Welcome to NutriGuide</string>
     <string name="guest_btn">Guest</string>
     <string name="register_btn">Register</string>
@@ -26,4 +26,7 @@
     <string name="food_description">Food Description</string>
     <string name="recipe">Recipe</string>
     <string name="nutrition">Nutrition</string>
+    <string name="show_about">About NutriGuide</string>
+    <string name="about_nutriguide">NutriGuide is an innovative application crafted to empower users in their journey towards a healthier lifestyle. It is meticulously designed to cater to the specific nutritional needs, health objectives, and dietary preferences of individuals. As the world gravitates towards health-conscious living, NutriGuide emerges as a vital tool for those seeking to harmonize their diet with their wellness goals.</string>
+    <string name="contact_button">Contact NutriGuide</string>
 </resources>
