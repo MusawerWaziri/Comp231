@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
+
 class FoodCategoryAdapter(
     context: Context,
     private val foodTypes: Array<String>

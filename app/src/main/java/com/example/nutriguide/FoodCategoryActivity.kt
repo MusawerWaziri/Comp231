@@ -1,7 +1,5 @@
 package com.example.nutriguide
 
-
-
 /**
 Alex Tang – Developer
 Abdul Waziri – Developer

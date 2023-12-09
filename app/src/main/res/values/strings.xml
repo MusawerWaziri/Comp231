@@ -5,4 +5,25 @@
     <string name="guest">Guest</string>
     <string name="category_button">Category Button</string>
     <string name="welcome_to_nutriguide">Welcome to NutriGuide</string>
+    <string name="guest_btn">Guest</string>
+    <string name="register_btn">Register</string>
+    <string name="login_btn">Login</string>
+    <string name="password_et">Password</string>
+    <string name="username_et">Username</string>
+    <string name="welcome_tv">Welcome to NutriGuide</string>
+    <string name="username_register_et">Username</string>
+    <string name="email_register_et">Email</string>
+    <string name="password_register_et">Password</string>
+    <string name="confirm_password_register_et">Confirm Password</string>
+    <string name="register_register_btn">Register</string>
+    <string name="no_foods_image_found_tv">No foods image found</string>
+    <string name="visit_us" />
+    <string name="email_contact_example_com_nphone_1234567890" />
+    <string name="send_email" />
+    <string name="_123_main_street_ncity_state_12345" />
+    <string name="call_us" />
+    <string name="contact_us" />
+    <string name="food_description">Food Description</string>
+    <string name="recipe">Recipe</string>
+    <string name="nutrition">Nutrition</string>
 </resources>

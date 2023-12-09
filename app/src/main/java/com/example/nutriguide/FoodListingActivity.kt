@@ -25,7 +25,7 @@ class FoodListingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food_listing)
 
-        tvNoFoodsFound = findViewById(R.id.tvNoFoodsFound)
+        tvNoFoodsFound = findViewById<TextView>(R.id.tvNoFoodsFound)
 
         val selectedFoodType = intent.getStringExtra(FOOD_TYPE)
 

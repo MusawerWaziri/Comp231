@@ -23,7 +23,7 @@
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:text="Welcome to NutriGuide"
+        android:text="@string/welcome_tv"
         android:textSize="24sp"
         android:visibility="visible" />
 
@@ -32,7 +32,7 @@
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Username"
+        android:hint="@string/username_et"
         android:visibility="visible"/>
 
     <EditText
@@ -40,7 +40,7 @@
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Password"
+        android:hint="@string/password_et"
         android:inputType="textPassword"
         android:visibility="visible"/>
 
@@ -49,7 +49,7 @@
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:textSize="15sp"
-        android:text="Login"
+        android:text="@string/login_btn"
         android:layout_gravity="center_horizontal"
         />
 
@@ -58,7 +58,7 @@
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:text="Register"
+        android:text="@string/register_btn"
         android:layout_gravity="center_horizontal"
         />
 
@@ -67,7 +67,7 @@
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:textSize="15sp"
-        android:text="Guest"
+        android:text="@string/guest_btn"
         android:layout_gravity="center_horizontal"
         />
 

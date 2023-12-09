@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_marginTop="5dp"
-    android:background="#00AAD4"
+    android:padding="5dp"
+    android:background="#FFE8F5E9"
     android:layout_marginBottom="5dp"
     android:orientation="horizontal">
 
@@ -13,7 +14,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_margin="3dp"
-        android:scaleType="center"
+        android:padding="5dp"
+        android:scaleType="centerInside"
         android:contentDescription="@string/image_description"
         android:src="@drawable/placeholder_image" />
 
@@ -21,6 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:padding="5dp"
         android:orientation="vertical"
         android:layout_margin="5dp">
 
@@ -29,9 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
+            android:textStyle="bold"
             android:text="@string/food_name" />
-
 
     </LinearLayout>
 
