@@ -3,6 +3,7 @@ package com.example.nutriguide
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -17,14 +18,15 @@ import com.squareup.picasso.Picasso
  */
 class FoodDetailActivity : AppCompatActivity() {
 
+    private lateinit var goBackButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food_detail)
 
+        goBackButton = findViewById(R.id.goBackHomeBtn)
 
-
-       val food = intent.getSerializableExtra("selectedFood") as? Food
-
+        val food = intent.getSerializableExtra("selectedFood") as? Food
 
         if(food != null){
             //Set data to views
@@ -41,6 +43,10 @@ class FoodDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "Food data not available", Toast.LENGTH_SHORT).show()
         }
 
+        goBackButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

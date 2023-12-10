@@ -30,4 +30,7 @@
     <string name="about_nutriguide">NutriGuide is an innovative application crafted to empower users in their journey towards a healthier lifestyle. It is meticulously designed to cater to the specific nutritional needs, health objectives, and dietary preferences of individuals. As the world gravitates towards health-conscious living, NutriGuide emerges as a vital tool for those seeking to harmonize their diet with their wellness goals.</string>
     <string name="contact_button">Contact NutriGuide</string>
     <string name="bg_image_contact" />
+    <string name="go_back_btn">Back To Home</string>
+    <string name="item_description">Item Description</string>
+    <string name="item_title">Item Title</string>
 </resources>

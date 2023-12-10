@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         guestButton = findViewById(R.id.guestBtn)
         welcomeMsg = findViewById(R.id.welcome_msg)
 
-        //Invisible for 2-seconds except for the welcome text
+        //Invisible for 2-seconds except for the logo and a welcome text
         usernameEditText.visibility = View.INVISIBLE
         passwordEditText.visibility = View.INVISIBLE
         loginButton.visibility = View.INVISIBLE
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         guestButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

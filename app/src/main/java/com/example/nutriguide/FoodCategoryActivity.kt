@@ -24,6 +24,9 @@ class FoodCategoryActivity : AppCompatActivity() {
 
         val foodTypes = listOf("Breakfast", "Lunch", "Dinner", "Dessert")
 
+        //val food = intent.getSerializableExtra("selectedFood") as? Food
+        // Use food details as needed
+
         val foodTypeListView = findViewById<ListView>(R.id.foodTypeListView)
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, foodTypes)
         foodTypeListView.adapter = adapter

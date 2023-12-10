@@ -1,11 +1,15 @@
 package com.example.nutriguide
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.SearchView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 
 /**
@@ -17,35 +21,84 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var buttonToggle: Button
     private lateinit var layoutInfo: LinearLayout
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+    private lateinit var searchView: SearchView
+    private lateinit var recycleView: RecyclerView
+    private lateinit var homeAdapter: HomeAdapter
+    private var foodList: List<Food> = listOf()
 
-            buttonToggle = findViewById(R.id.aboutBtnToggle)
-            layoutInfo = findViewById<LinearLayout>(R.id.layoutInfo)
-            categoryButton = findViewById(R.id.btnCategory)
-            contactButton = findViewById(R.id.btnContact)
 
-            buttonToggle.setOnClickListener {
-                if (layoutInfo.visibility == View.GONE) {
-                    layoutInfo.visibility = View.VISIBLE
-                    buttonToggle.text = "Hide Info"
-                } else {
-                    layoutInfo.visibility = View.GONE
-                    buttonToggle.text = "About NutriGuide"
-                }
+    override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_home)
+
+        searchView = findViewById(R.id.searchBarHome)
+        recycleView = findViewById(R.id.recycleViewHome)
+        searchView.clearFocus()
+
+        homeAdapter = HomeAdapter(foodList)
+        recycleView.layoutManager = LinearLayoutManager(this)
+        recycleView.adapter = homeAdapter
+
+        setupSearchView()
+
+
+        buttonToggle = findViewById(R.id.aboutBtnToggle)
+        layoutInfo = findViewById<LinearLayout>(R.id.layoutInfo)
+        categoryButton = findViewById(R.id.btnCategory)
+        contactButton = findViewById(R.id.btnContact)
+
+        //About Nutriguide Toggle to show and hide info
+        buttonToggle.setOnClickListener {
+            if (layoutInfo.visibility == View.GONE) {
+                layoutInfo.visibility = View.VISIBLE
+                buttonToggle.text = "Hide Info"
+            } else {
+                layoutInfo.visibility = View.GONE
+                buttonToggle.text = "About NutriGuide"
+            }
+        }
+
+        categoryButton.setOnClickListener {
+            val intent1 = Intent(this, FoodCategoryActivity::class.java)
+            startActivity(intent1)
+        }
+
+        contactButton.setOnClickListener {
+            val intent2 = Intent(this, ContactActivity::class.java)
+            startActivity(intent2)
+        }
+    }
+    private fun setupSearchView() {
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { filterData(it) }
+                return true
             }
 
-            categoryButton.setOnClickListener {
-                val intent = Intent(this, FoodCategoryActivity::class.java)
-                startActivity(intent)
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let { filterData(it) }
+                return true
             }
+        })
+    }
 
-            contactButton.setOnClickListener {
-                val intent = Intent(this, ContactActivity::class.java)
-                startActivity(intent)
-            }
+    private fun filterData(query: String) {
+        val filteredList = foodList.filter {
+            it.name.contains(query, ignoreCase = true) ||
+                    it.type.contains(query, ignoreCase = true) ||
+                    it.description.contains(query, ignoreCase = true)
+        }
+        if (filteredList.isNotEmpty() || query.isNotEmpty()) {
+            recycleView.visibility = View.VISIBLE
+        } else {
+            recycleView.visibility = View.GONE
+        }
+        homeAdapter.updateItems(filteredList)
+    }
 
-   }
+
 
 }
+
+
+

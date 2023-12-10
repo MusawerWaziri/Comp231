@@ -26,7 +26,8 @@ class FoodListingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_food_listing)
 
         tvNoFoodsFound = findViewById<TextView>(R.id.tvNoFoodsFound)
-
+        val food = intent.getSerializableExtra("selectedFood") as? Food
+        // Use food details as needed
         val selectedFoodType = intent.getStringExtra(FOOD_TYPE)
 
         val filteredFoods = Foods.FOODS.filter { it.type == selectedFoodType }

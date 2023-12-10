@@ -11,6 +11,7 @@ data class Food(
     val nutrition: String,
     val image: String):Serializable
 
+
 object Foods {
     val FOODS = listOf(
         Food(
@@ -91,7 +92,7 @@ object Foods {
         ),
         Food(
             foodId = 2,
-            name = "Scramble egg",
+            name = "Scramble Egg",
             type = "Breakfast",
             description = "Description\n\n" +
                     "\"In the soft light of early morning, there’s a simple yet profound joy in preparing scrambled eggs. It's a dish that whispers of shared moments and tender care. Each stir of the spatula is like a gentle caress, transforming the eggs into a soft, golden blanket of comfort and love. The eggs, once separate entities, blend together in a harmonious dance, creating a texture as smooth as silk and as warm as a loving embrace. The delicate aroma wafts through the air, a prelude to the intimate meal shared between two souls. Scrambled eggs, in their unpretentious simplicity, become a symbol of life's most cherished moments - a quiet morning filled with soft whispers, gentle laughter, and the joy of being together. It's a dish that doesn’t just nourish the body but feeds the heart with its understated elegance and the promise of a new day spent in loving company.\"",
@@ -1035,12 +1036,12 @@ object Foods {
         ),
         Food(
             foodId = 15,
-            name = "Food 15",
+            name = "Squash and Zucchini Casserole",
             type = "Dinner",
             description = "",
             recipe = "",
             nutrition ="",
-            image = "https://i.pinimg.com/originals/f0/ac/6f/f0ac6faa1a4854c3951beff1f27a5453.jpg"
+            image = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feasyweeknightrecipes.com%2Fwp-content%2Fuploads%2F2020%2F11%2FYellow-Squash-and-Zucchini-Noodles-Casserole-7.jpg&f=1&nofb=1&ipt=324ed454782fa84615f2b2bacbcb5cce5f944d637586182ca4f3ee428e352336&ipo=images"
         ),
         Food(
             foodId = 16,
@@ -1080,12 +1081,12 @@ object Foods {
         ),
         Food(
             foodId = 20,
-            name = "Food 20",
+            name = "Tomato Soup",
             type = "Lunch",
             description = "",
             recipe = "",
             nutrition ="",
-            image = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruceeats.com%2Fthmb%2FmbYzpYUAbxotK30YqpSVmDEnnZ8%3D%2F4494x3000%2Ffilters%3Afill(auto%2C1)%2Fscrambled-eggs-recipe-1001086_13-5c56061946e0fb00013fb6ad.jpg&f=1&nofb=1&ipt=47f3584c7bb67b452aea27a4d902c81586e7b1b9656364a8913485d1fdf49ff6&ipo=images"
+            image = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fwonkywonderful.com%2Fwp-content%2Fuploads%2F2019%2F01%2Fvegetable-soup-recipe-2.jpg%3Fresize%3D980%252C1462%26ssl%3D1&f=1&nofb=1&ipt=80218976a138ebc673f98da8a937934cda1c8da95d6e2de042e0da5e94d68769&ipo=images"
         ),
         Food(
             foodId = 21,
