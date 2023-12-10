@@ -19,14 +19,15 @@
     <string name="no_foods_image_found_tv">No foods image found</string>
     <string name="visit_us" />
     <string name="email_contact_example_com_nphone_1234567890" />
-    <string name="send_email" />
-    <string name="_123_main_street_ncity_state_12345" />
-    <string name="call_us" />
-    <string name="contact_us" />
+    <string name="send_email" >EMAIL</string>
+    <string name="_123_main_street_ncity_state_12345"/>
+    <string name="call_us">CALL</string>
+    <string name="contact_us"/>
     <string name="food_description">Food Description</string>
     <string name="recipe">Recipe</string>
     <string name="nutrition">Nutrition</string>
     <string name="show_about">About NutriGuide</string>
     <string name="about_nutriguide">NutriGuide is an innovative application crafted to empower users in their journey towards a healthier lifestyle. It is meticulously designed to cater to the specific nutritional needs, health objectives, and dietary preferences of individuals. As the world gravitates towards health-conscious living, NutriGuide emerges as a vital tool for those seeking to harmonize their diet with their wellness goals.</string>
     <string name="contact_button">Contact NutriGuide</string>
+    <string name="bg_image_contact" />
 </resources>
