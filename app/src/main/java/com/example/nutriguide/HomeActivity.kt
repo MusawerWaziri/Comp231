@@ -1,5 +1,7 @@
 package com.example.nutriguide
 
+import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -47,6 +49,9 @@ class HomeActivity : AppCompatActivity() {
         categoryButton = findViewById(R.id.btnCategory)
         contactButton = findViewById(R.id.btnContact)
 
+        //Logout button
+        val logoutButton = findViewById<Button>(R.id.logoutButton)
+
         //About Nutriguide Toggle to show and hide info
         buttonToggle.setOnClickListener {
             if (layoutInfo.visibility == View.GONE) {
@@ -59,13 +64,17 @@ class HomeActivity : AppCompatActivity() {
         }
 
         categoryButton.setOnClickListener {
-            val intent1 = Intent(this, FoodCategoryActivity::class.java)
-            startActivity(intent1)
+            //val intent1 = Intent(this, FoodCategoryActivity::class.java)
+           // startActivity(intent1)
         }
 
         contactButton.setOnClickListener {
             val intent2 = Intent(this, ContactActivity::class.java)
             startActivity(intent2)
+        }
+
+        logoutButton.setOnClickListener {
+            showLogoutConfirmationDialog()
         }
     }
     private fun setupSearchView() {
@@ -94,6 +103,37 @@ class HomeActivity : AppCompatActivity() {
             recycleView.visibility = View.GONE
         }
         homeAdapter.updateItems(filteredList)
+    }
+
+    private fun showLogoutConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Log Out")
+        builder.setMessage("Are you sure you want to log out?")
+
+        builder.setPositiveButton("Yes") { dialog, which ->
+            // Implement your log-out logic here
+            performLogout()
+        }
+
+        builder.setNegativeButton("No") { dialog, which ->
+            dialog.dismiss()
+        }
+
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun performLogout() {
+        // Clear session data
+        val sharedPreferences = getSharedPreferences("YourSharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+
+        // Navigate to the login activity
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Close the current activity
     }
 
 
