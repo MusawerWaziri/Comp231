@@ -1,5 +1,6 @@
 package com.example.nutriguide
 
+import java.util.*
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -8,10 +9,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.reflect.full.*
 
 
 /**
@@ -64,8 +65,8 @@ class HomeActivity : AppCompatActivity() {
         }
 
         categoryButton.setOnClickListener {
-            //val intent1 = Intent(this, FoodCategoryActivity::class.java)
-           // startActivity(intent1)
+            val intentCatBtn = Intent(this, FoodCategoryActivity::class.java)
+            startActivity(intentCatBtn)
         }
 
         contactButton.setOnClickListener {
@@ -93,7 +94,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun filterData(query: String) {
         val filteredList = foodList.filter {
-            it.name.contains(query, ignoreCase = true) ||
+
+                    it.name.contains(query, ignoreCase = true) ||
                     it.type.contains(query, ignoreCase = true) ||
                     it.description.contains(query, ignoreCase = true)
         }

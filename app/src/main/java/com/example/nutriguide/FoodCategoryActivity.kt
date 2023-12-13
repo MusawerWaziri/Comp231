@@ -12,6 +12,7 @@ Will buttons to the FoodListingActivity, about, contact, etc.
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -37,6 +38,7 @@ class FoodCategoryActivity : AppCompatActivity() {
                 val intent = Intent(this, FoodListingActivity::class.java)
                 intent.putExtra(FoodListingActivity.FOOD_TYPE, selectedFoodType)
                 startActivity(intent)
+                Log.d("clicked","clicked")
             }
     }
 }

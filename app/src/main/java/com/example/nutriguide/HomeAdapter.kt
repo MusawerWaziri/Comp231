@@ -28,6 +28,6 @@ class HomeAdapter(private var items: List<Food>) : RecyclerView.Adapter<HomeAdap
 
     fun updateItems(newItems: List<Food>) {
         items = newItems
-        notifyDataSetChanged()
+
     }
 }
