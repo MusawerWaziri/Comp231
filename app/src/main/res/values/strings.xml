@@ -5,4 +5,9 @@
     <string name="guest">Guest</string>
     <string name="category_button">Category Button</string>
     <string name="welcome_to_nutriguide">Welcome to NutriGuide</string>
+    <string name="bg_image_contact" />
+    <string name="reach_us">Contact NutriGuide  We value your feedback and inquiries. For any questions or assistance, please feel free to reach out to us.\n\nEmail: contact@nutriguide.com\n\nPhone: +1 (123) 456-7890\n\nOur dedicated team is here to assist you and provide the support you need. Thank you for choosing NutriGuide!</string>
+    <string name="send_email" >Email Us</string>
+    <string name="call_us" >Call Us</string>
+    <string name="go_home">Go To Home</string>
 </resources>

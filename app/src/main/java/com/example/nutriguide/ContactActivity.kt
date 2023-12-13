@@ -8,12 +8,14 @@ import android.widget.Button
 import android.widget.TextView
 
 class ContactActivity : AppCompatActivity() {
+    private lateinit var homeButton:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
 
         val emailButton: Button = findViewById(R.id.buttonEmail)
         val callButton: Button = findViewById(R.id.buttonCall)
+        homeButton = findViewById(R.id.goHome)
 
         emailButton.setOnClickListener {
             val emailAddress = "contact@example.com"
@@ -28,6 +30,9 @@ class ContactActivity : AppCompatActivity() {
             phoneIntent.data = Uri.parse("tel:$phoneNumber")
             startActivity(phoneIntent)
         }
-
+        homeButton.setOnClickListener {
+            val homeIntent = Intent(this, HomeActivity::class.java)
+            startActivity(homeIntent)
+        }
     }
 }
