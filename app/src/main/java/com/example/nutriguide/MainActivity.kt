@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         //Firebase setup
         FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main)
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         guestButton = findViewById(R.id.guestBtn)
         welcomeMsg = findViewById(R.id.welcome_msg)
 
-        //Invisible for 2sec except for the welcome text
+        //Invisible for 2-seconds except for the logo and a welcome text
         usernameEditText.visibility = View.INVISIBLE
         passwordEditText.visibility = View.INVISIBLE
         loginButton.visibility = View.INVISIBLE
@@ -74,10 +75,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-        // Set on click listener for register button to navigate to the RegisterActivity
+        // Set on click listener for guest button to navigate to the HomeActivity
         guestButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -96,4 +98,5 @@ class MainActivity : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
 }

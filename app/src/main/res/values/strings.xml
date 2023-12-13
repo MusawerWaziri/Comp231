@@ -3,11 +3,34 @@
     <string name="food_name" />
     <string name="image_description" />
     <string name="guest">Guest</string>
-    <string name="category_button">Category Button</string>
+    <string name="category_button">Food Category</string>
     <string name="welcome_to_nutriguide">Welcome to NutriGuide</string>
+    <string name="reach_us">Contact NutriGuide  We value your feedback and inquiries. For any questions or assistance, please feel free to reach out to us.\n\nEmail: contact@nutriguide.com\n\nPhone: +1 (123) 456–7890\n\nOur dedicated team is here to assist you and provide the support you need. Thank you for choosing NutriGuide!</string>
+
+
+    <string name="guest_btn">Guest</string>
+    <string name="register_btn">Register</string>
+    <string name="login_btn">Login</string>
+    <string name="password_et">Password</string>
+    <string name="username_et">Username</string>
+    <string name="welcome_tv">Welcome to NutriGuide</string>
+    <string name="username_register_et">Username</string>
+    <string name="email_register_et">Email</string>
+    <string name="password_register_et">Password</string>
+    <string name="confirm_password_register_et">Confirm Password</string>
+    <string name="register_register_btn">Register</string>
+    <string name="no_foods_image_found_tv">No foods image found</string>
+    <string name="send_email" >EMAIL</string>
+    <string name="call_us">CALL</string>
+    <string name="food_description">Food Description</string>
+    <string name="recipe">Recipe</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="show_about">About NutriGuide</string>
+    <string name="about_nutriguide">NutriGuide is an innovative application crafted to empower users in their journey towards a healthier lifestyle. It is meticulously designed to cater to the specific nutritional needs, health objectives, and dietary preferences of individuals. As the world gravitates towards health-conscious living, NutriGuide emerges as a vital tool for those seeking to harmonize their diet with their wellness goals.</string>
+    <string name="contact_button">Contact NutriGuide</string>
     <string name="bg_image_contact" />
-    <string name="reach_us">Contact NutriGuide  We value your feedback and inquiries. For any questions or assistance, please feel free to reach out to us.\n\nEmail: contact@nutriguide.com\n\nPhone: +1 (123) 456-7890\n\nOur dedicated team is here to assist you and provide the support you need. Thank you for choosing NutriGuide!</string>
-    <string name="send_email" >Email Us</string>
-    <string name="call_us" >Call Us</string>
-    <string name="go_home">Go To Home</string>
+    <string name="go_back_btn">Back To Home</string>
+    <string name="item_description">Item Description</string>
+    <string name="item_title">Item Title</string>
+    <string name="log_out">Log Out</string>
 </resources>

@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFA5D6A7"
+    android:padding="5dp"
+    android:orientation="vertical"
     tools:context=".FoodCategoryActivity">
 
     <ListView
         android:id="@+id/foodTypeListView"
-        android:layout_width="wrap_content"
-        app:flow_horizontalAlign="center"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#FFE8F5E9"
+        android:layout_gravity="center"
+        app:flow_horizontalAlign="center"
         android:entries="@array/food_types" />
 
 </LinearLayout>

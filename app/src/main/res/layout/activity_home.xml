@@ -5,6 +5,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="#FFA5D6A7"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/searchBarHome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#E8F5E9"
+        android:padding="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewHome"
+        android:layout_width="300dp"
+        android:background="#E8F5E9"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/aboutBtnToggle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_margin="3dp"
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:textSize="20sp"
+        android:text="@string/show_about"/>
+
+    <LinearLayout
+        android:id="@+id/layoutInfo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE8F5E9"
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:text="@string/about_nutriguide"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCategory"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:textSize="20sp"
+        android:text="@string/category_button"/>
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:textSize="20sp"
+        android:text="@string/contact_button"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
+        android:layout_gravity="center"
+        />
 
 </LinearLayout>

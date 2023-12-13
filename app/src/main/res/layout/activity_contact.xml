@@ -16,6 +16,7 @@
         android:contentDescription="@string/bg_image_contact"
         android:src="@drawable/contact_bg"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,8 +54,9 @@
             android:layout_height="55dp"
             android:textSize="18sp"
             android:layout_gravity="center_horizontal"
-            android:text="@string/go_home" />
+            android:text="@string/go_back_btn" />
 
     </LinearLayout>
-
 </FrameLayout>
+
+
